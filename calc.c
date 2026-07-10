@@ -1,40 +1,40 @@
 #include <stdio.h>
 
-int main(){
+int main() {
 
-    int a;
-    int b;
-    int choice;
+    int a, b;
+    char choice;
 
-    printf("enter first number: ");
+    printf("Enter first number: ");
     scanf("%d", &a);
 
-    printf("enter second number: ");
+    printf("Enter second number: ");
     scanf("%d", &b);
 
-    printf("enter your choice from these followings: ");
-    printf("1. Addition");
-    printf("2. Subtraction");
-    printf("3. Multiplication");
-    printf("4. Divison");
-    scanf("%d", &choice);
+    printf("\nChoose an operation:\n");
+    printf("+. Addition\n");
+    printf("-. Subtraction\n");
+    printf("*. Multiplication\n");
+    printf("/. Division\n");
+    printf("Enter your choice: ");
+    scanf(" %c", &choice);
 
     switch (choice) {
         case '+':
-            printf("Result = %.2f\n", a + b);
+            printf("Result = %d\n", a + b);
             break;
 
         case '-':
-            printf("Result = %.2f\n", a - b);
+            printf("Result = %d\n", a - b);
             break;
 
         case '*':
-            printf("Result = %.2f\n", a * b);
+            printf("Result = %d\n", a * b);
             break;
 
         case '/':
             if (b != 0)
-                printf("Result = %.2f\n", a / b);
+                printf("Result = %.2f\n", (float)a / b);
             else
                 printf("Error: Division by zero is not allowed.\n");
             break;
@@ -44,5 +44,4 @@ int main(){
     }
 
     return 0;
-
 }
